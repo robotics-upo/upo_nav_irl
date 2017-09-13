@@ -1,0 +1,11 @@
+#! /bin/bash
+
+echo "-----------------"
+echo "Learning"
+echo "-----------------"
+roslaunch upo_rrt_planners.launch
+sleep 5
+roslaunch upo_nav_irl.launch
+
+	
+#done

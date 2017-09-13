@@ -1,0 +1,63 @@
+<package>
+    <name>upo_nav_irl</name>
+    <version>1.0.0</version>
+    <description>
+
+	Learning algorithms by employing a RRT* planner
+
+    </description>
+    <author>Noé Pérez-Higueras</author>
+    <maintainer email="noeperez@upo.es">Noé Pérez</maintainer>
+    <license>BSD</license>
+    <url>https://github.com/robotics-upo</url>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+	<build_depend>actionlib</build_depend>
+	<build_depend>angles</build_depend>
+	<build_depend>cmake_modules</build_depend>
+	<build_depend>geometry_msgs</build_depend>
+	<build_depend>eigen</build_depend>
+	<build_depend>message_generation</build_depend>
+	<build_depend>move_base_msgs</build_depend>
+	<build_depend>nav_core</build_depend>
+	<build_depend>nav_msgs</build_depend>
+	<build_depend>pcl_ros</build_depend>
+	<build_depend>plc_conversions</build_depend>
+	<build_depend>pluginlib</build_depend>
+	<build_depend>rosconsole</build_depend>
+	<build_depend>roscpp</build_depend>
+	<build_depend>std_msgs</build_depend>
+	<build_depend>std_srvs</build_depend>
+	<build_depend>tf</build_depend>
+	<build_depend>visualization_msgs</build_depend>
+	<build_depend>rosbag</build_depend>
+	<build_depend>upo_msgs</build_depend>
+	<build_depend>upo_rrt_planners</build_depend>
+	<build_depend>navigation_features</build_depend>
+
+	<run_depend>angles</run_depend>
+	<run_depend>cmake_modules</run_depend>
+	<run_depend>actionlib</run_depend>
+	<run_depend>eigen</run_depend>
+	<run_depend>geometry_msgs</run_depend>
+	<run_depend>message_runtime</run_depend>
+	<run_depend>move_base_msgs</run_depend>
+	<run_depend>nav_core</run_depend>
+	<run_depend>nav_msgs</run_depend>
+	<run_depend>pluginlib</run_depend>
+	<run_depend>pcl_ros</run_depend>
+	<run_depend>plc_conversions</run_depend>
+	<run_depend>rosconsole</run_depend>
+	<run_depend>roscpp</run_depend>
+	<run_depend>rospy</run_depend>
+	<run_depend>std_msgs</run_depend>
+	<run_depend>std_srvs</run_depend>
+	<run_depend>tf</run_depend>
+	<run_depend>visualization_msgs</run_depend>
+	<run_depend>rosbag</run_depend>
+  	<run_depend>upo_msgs</run_depend>
+	<run_depend>upo_rrt_planners</run_depend>
+	<run_depend>navigation_features</run_depend>
+
+</package>

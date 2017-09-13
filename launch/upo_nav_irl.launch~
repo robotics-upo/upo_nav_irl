@@ -1,0 +1,26 @@
+<!-- -->
+<launch>
+
+  <!-- Run Learning -->
+   <node pkg="upo_nav_irl" type="upo_nav_irl" name="upo_nav_irl" respawn="false" output="screen" >
+    <param name="demo_dir" type="string" value="/home/noe/catkin_ws/src/upo_nav_irl/data/" />
+	<param name="epochs" type="int" value="20" />
+	<param name="batch_size" type="int" value="10" />
+	<param name="normalize_weights" type="bool" value="true" />
+	<param name="initial_random_weights" type="bool" value="true" />
+
+	<param name="algorithm" type="string" value="RTIRL" />
+	<!-- Parameters of the RTIRL algorithm -->
+	<param name="rtirl-alpha" type="double" value="0.5" />
+	<param name="rtirl-stab_incr" type="double" value="0.01" />
+	<param name="rtirl-rrt_repetitions" type="int" value="3" />
+
+	float alpha = 0.5;
+	float stabilizer = 1.0;
+	float stab_incr = 0.01;
+	int rrt_repetitions = 3;
+
+  </node>
+  
+ 
+</launch>

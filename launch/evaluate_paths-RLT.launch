@@ -1,0 +1,50 @@
+<!-- -->
+<launch>
+
+     <!--Rviz tool visualizer -->
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find upo_nav_irl)/learning.rviz" />
+
+	<!-- launch-prefix="xterm -e gdb (doble hyphen)args"-->
+	<node pkg="upo_rrt_planners" type="rrt_ros_wrapper_node" name="rrt_ros_wrapper_node" output="screen" >
+
+		<!--remap from="/upo_navigation_simple/goal" to="/move_base_simple/goal" /-->
+		<rosparam file="$(find upo_launchers)/params_sim/navigation_params.yaml" command="load"  />
+		<rosparam file="$(find upo_launchers)/params_sim/costmap_common_params.yaml" command="load" ns="global_costmap" />
+		<rosparam file="$(find upo_launchers)/params_sim/costmap_common_params.yaml" command="load" ns="local_costmap" />
+		<rosparam file="$(find upo_launchers)/params_sim/local_costmap_params.yaml" command="load"  />
+		<rosparam file="$(find upo_launchers)/params_sim/global_costmap_params.yaml" command="load" />
+	</node>
+
+
+  	<!-- Run Evaluation -->
+   	<node pkg="upo_nav_irl" type="evaluate_paths" name="evaluate" respawn="false" output="screen" >
+
+		<!-- Indicate which txt files to store -->
+		<param name="store_demo_paths" type="bool" value="true" />
+		<param name="store_rrt_paths" type="bool" value="true" />
+		<param name="store_people" type="bool" value="false" />
+		<param name="store_fc_diff" type="bool" value="true" />
+
+		<!-- Directories -->
+    	<param name="demo_bag_dir" type="string" value="$(find upo_nav_irl)/data/set2/test/" />
+		<param name="store_dir" type="string" value="$(find upo_nav_irl)/results/RLT/" />
+
+		<!-- others -->
+		<param name="dissimilarity_threshold" type="double" value="0.012" />
+		<param name="metric2_threshold_low" type="double" value="0.15" />
+		<param name="metric2_threshold_med" type="double" value="0.40" />
+		<param name="metric2_threshold_high" type="double" value="0.8" />
+		<param name="adapt_paths" type="bool" value="true" />
+		<param name="store_frame" type="string" value="/odom" />
+		<param name="rrt_repetitions" type="int" value="5" />
+		<param name="use_weights" type="bool" value="true" />
+		<param name="rrt_w1" value="0.276233" /> <!--set1:"0.263364" set2:"0.276233"-->
+		<param name="rrt_w2" value="0.292601" /> <!--set1:"0.288186" set2:"0.292601"-->
+		<param name="rrt_w3" value="0.289757" /> <!--set1:"0.276853" set2:"0.289757"-->
+		<param name="rrt_w4" value="0.0431168" /><!--set1:"0.073004" set2:"0.0431168"--> 
+		<param name="rrt_w5" value="0.0982915" /><!--set1:"0.098593" set2:"0.0982915"-->
+
+  	</node>
+
+ 
+</launch>
