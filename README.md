@@ -11,7 +11,7 @@ In this case, the library of RRT* planners upo_rrt_planners and ROS has been use
 The package is a **work in progress** used in research prototyping. Pull requests and/or issues are highly encouraged.
 
 
-[1] N. Pérez-Higueras, F. Caballero, and L. Merino, "Learning robot navigation behaviors by demonstration using a rrt* planner", in International Conference on Social Robotics. Springer International Publishing, 2016, pp. 1–10.
+[1] Pérez-Higueras, N., Caballero, F. & Merino, L. Teaching Robot Navigation Behaviors to Optimal RRT Planners. Int J of Soc Robotics 10, 235–249 (2018). https://doi.org/10.1007/s12369-017-0448-1
 
 [2] K. Shiarlis, J. Messias, and S. Whiteson, "Rapidly exploring learning trees", in Proceedings of the IEEE International Conference on Robotics and Automation (ICRA). Singapore, Singapore: IEEE, May 2017. [Online]. Available: http://teresaproject.eu/project/publications-new
 
